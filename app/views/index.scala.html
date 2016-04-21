@@ -1,0 +1,42 @@
+@(message: String)
+
+    @main("Welcome to Play") {
+        <div ng-app="StocksApp">
+            <div ng-controller="StocksController as stock">
+
+                <div align="right" style="font-family: sans-serif">
+
+                    <form >
+                        Add Stock: <input type="text" ng-model="symbol" placeholder="Symbol">
+                        <button ng-click="addStock(symbol)">Add</button>
+                    </form>
+
+
+                </div>
+
+                <div ng-repeat="info in infoList"  ng-class="{even: $even, odd: $odd}">
+
+                    <ul >
+                        <li>Symbol <br/>{{info.symbol}} </li>
+                        <li>Name <br/>{{info.name}} </li>
+                        <li>Price <br/>{{info.price}} </li>
+                        <li>Bid <br/>{{info.bid}} </li>
+                        <li>Ask <br/>{{info.ask}} </li>
+                        <li>Dividend <br/>{{info.dividend}} </li>
+                        <li>Change <br/>{{info.change}}
+                            <span class="up" ng-if="info.change >=0"><i class="fa fa-arrow-up"></i></span>
+                            <span class="down" ng-if="info.change < 0"><i class="fa fa-arrow-down"></i></span>
+                        </li>
+                        <li>
+                            <button type="submit" ng-click="removeStock(info.symbol)"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+
+            </div>
+        </div>
+    }

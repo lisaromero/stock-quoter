@@ -1,0 +1,46 @@
+#stocks-title {
+    color : #92D03D;
+    font: 2em "Open Sans", sans-serif;
+
+}
+.even{
+    background-color: lightgray;
+    padding: 50px 30px 50px 80px;
+    margin: 10px;
+    font-family: sans-serif;
+}
+.odd{
+    background-color: darkgray;
+    padding: 50px 30px 50px 80px;
+    margin: 10px;
+    font-family: sans-serif;
+}
+.add{
+    font-family: sans-serif;
+}
+.up{
+    color : green;
+}
+.down{
+    color : red;
+}
+.remove{
+    text-align: right;
+    position:fixed;
+    top:0;
+}
+
+ul {
+    width: 100%;
+    display: table;
+    table-layout: fixed; /* optional, for equal spacing */
+    border-collapse: collapse;
+}
+li {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+
